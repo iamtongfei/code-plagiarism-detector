@@ -2,9 +2,14 @@
 def addNumbers(a, b):
     print("Sum is ", a + b)
 
-file_path = "data/0101.ipynb"
 def get_file_content(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read()
-    return content
-    print(content)
+        # Parse the notebook content using nbformat
+        notebook = nbformat.reads(content, as_version=4)
+
+        # Convert the notebook content to a JSON object
+        notebook_json = nbformat.writes(notebook)
+        notebook_json_obj = json.loads(notebook_json)
+
+    return notebook_json_obj['cells']
