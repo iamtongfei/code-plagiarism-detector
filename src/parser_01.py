@@ -1,10 +1,8 @@
+# functions
+def addNumbers(a, b):
+    print("Sum is ", a + b)
 
-import nbformat
-import json
-
-
-
-def get_list_cells(file_path):
+def get_file_content(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read()
         # Parse the notebook content using nbformat
