@@ -1,1 +1,8 @@
-pandas
+os
+nbformat
+fuzzywuzzy, fuzz
+re
+hashlib
+difflib
+scikit-learn, TfidfVectorizer, cosine_similarity
+datasketch, MinHash, MinHashLSH
